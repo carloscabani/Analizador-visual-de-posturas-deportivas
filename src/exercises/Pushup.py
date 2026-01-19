@@ -4,6 +4,7 @@ import numpy as np
 from src.Captura_camara import CapturaCamara
 from src.exercises.Ejercicio import Exercise
 from src.utils import *
+from src.exercises.Squat import draw_angle_visualization  # Import the required function
 
 mp_drawing = mp.solutions.drawing_utils
 mp_pose = mp.solutions.pose
