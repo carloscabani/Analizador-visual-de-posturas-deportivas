@@ -38,6 +38,24 @@ class CapturaCamara(object):
     def show_frame(self):
         return self.status, self.frame  
 
+    def show_live_analysis(self):
+        """
+        Display the live camera feed in a window for real-time analysis.
+        Press 'ESC' to exit the live feed.
+        """
+        while not self.stopped:
+            status, frame = self.show_frame()
+            if not status or frame is None:
+                break
+
+            cv2.imshow('Live Analysis', frame)
+
+            # Exit on pressing 'ESC'
+            if cv2.waitKey(1) & 0xFF == 27:
+                break
+
+        self.release()
+        cv2.destroyAllWindows()
 
     def release(self):
         self.stopped = True

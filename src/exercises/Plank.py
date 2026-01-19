@@ -5,7 +5,7 @@ import time
 from src.Captura_camara import CapturaCamara
 from src.exercises.Ejercicio import Exercise
 from src.utils import *
-from src.exercises.Squat import draw_angle_visualization  # Importar la función necesaria
+from src.exercises.Squat import draw_angle_visualization 
 
 mp_drawing = mp.solutions.drawing_utils
 mp_pose = mp.solutions.pose

@@ -1,22 +1,21 @@
 import argparse
 
 from src.exercises.Squat import Squat
-from src.exercises.Plank import Plank  # Importar la clase Plank
-from src.exercises.Pushup import Pushup  # Import Pushup class
-
+from src.exercises.Plank import Plank  
+from src.exercises.Pushup import Pushup  
 
 class WorkoutAnalyzer:
     def __init__(self):
         self.squat = Squat()
         self.plank = Plank()
-        self.pushup = Pushup()  # Add Pushup instance
+        self.pushup = Pushup()  
 
     def rep(self, type, source):
         if type.lower() == "squat":
             self.squat.exercise(source)
         elif type.lower() == "plank":
             self.plank.exercise(source)
-        elif type.lower() == "pushup":  # Add Pushup handling
+        elif type.lower() == "pushup": 
             self.pushup.exercise(source)
         else:
             raise ValueError(f"Input {type} and/or {source} is not correct")
